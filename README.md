@@ -1,14 +1,12 @@
-### Date created
-Include the date you created this project and README file.
+### Date created: July 2019
 
-### Project Title
-Replace the Project Title
+### Bike Share Project
 
 ### Description
-Describe what your project is about and what it does
+This python script prompts the user to chose one of three cities. The user can also pick a month and a day of the week. Then the script will generate statistics that fit the user's selected criteria. There are statistics on users, stations and rouths.
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.

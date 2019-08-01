@@ -1,3 +1,5 @@
+### Author: Corina Schusheim
+
 ### Date created: July 2019
 
 ### Bike Share Project

@@ -215,6 +215,15 @@ def trip_duration_stats(df):
 
     print('The average trip takes {0:.2f} hours, {1:.2f} minutes and {2:.2f} seconds.'.format(average_hours, average_remaining_minutes, average_remaining_seconds))
 
+    # TO DO: display min travel time
+    min_seconds = df['Trip Duration'].min()
+    min_minutes = min_seconds // 60
+    min_hours = min_minutes // 60
+    min_remaining_minutes = min_minutes - (min_hours * 60)
+    min_remaining_seconds = min_seconds - (min_minutes * 60 
+
+    print('The minimum trip takes {0:.2f} hours, {1:.2f} minutes and {2:.2f} seconds.'.format(min_hours, min_remaining_minutes, min_remaining_seconds))
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -259,6 +268,13 @@ def user_stats(df):
     print('-'*40)
 
 def main():
+
+# -*- coding: utf-8 -*-
+""" This main module prompts the end user for selections, loads data from a CSV file and runs a variety of functions to produce output.
+"""
+    print('\nStarting main program...\n')
+    start_time = time.time()
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -271,6 +287,8 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+    print("\nThe main program took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 
 if __name__ == "__main__":

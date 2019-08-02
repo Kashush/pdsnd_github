@@ -262,6 +262,8 @@ def main():
 # -*- coding: utf-8 -*-
 """ This main module prompts the end user for selections, loads data from a CSV file and runs a variety of functions to produce output.
 """
+    print('\nStarting main program...\n')
+    start_time = time.time()
 
     while True:
         city, month, day = get_filters()
@@ -275,6 +277,8 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+    print("\nThe main program took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 
 if __name__ == "__main__":

@@ -258,6 +258,11 @@ def user_stats(df):
     print('-'*40)
 
 def main():
+
+# -*- coding: utf-8 -*-
+""" This main module prompts the end user for selections, loads data from a CSV file and runs a variety of functions to produce output.
+"""
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
